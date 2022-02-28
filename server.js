@@ -1,6 +1,5 @@
 var express = require('express');
 var projectlink = require('./routes/router');
-var reactdata = require('./routes/react')
 var app = express();
 
 var portnum = 8080;
@@ -14,5 +13,4 @@ app.get('/', function(req, res){
 });
 app.use('/user', projectlink);
 
-app.use('/react', reactdata);
 
