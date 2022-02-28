@@ -2,11 +2,15 @@ var express = require('express');
 var projectlink = require('./routes/router');
 var app = express();
 
+var portnum = 8080;
+
+app.listen(portnum, function(){
+    console.log('서버구동');
+});
+
 app.get('/', function(req, res){
-    res.send('localhost:8080/ 글자노출하게됨');
-})
+    res.send('글자노출해봄');
+});
 app.use('/user', projectlink);
 
-app.listen(8080, function(){
-  console.log('서버구동확인콘솔정보출력')
-});
+
